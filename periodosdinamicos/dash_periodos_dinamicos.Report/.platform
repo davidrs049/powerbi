@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "dash_periodos_dinamicos"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "57355c66-e8ad-49ec-9565-0e5011ae44e3"
+  }
+}

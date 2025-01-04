@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "dash_periodos_dinamicos"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cbf74ea9-120c-469b-bb19-c86b84d6680c"
+  }
+}

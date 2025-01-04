@@ -1,0 +1,9 @@
+{
+  "version": "4.0",
+  "datasetReference": {
+    "byPath": {
+      "path": "../dash_periodos_dinamicos.SemanticModel"
+    },
+    "byConnection": null
+  }
+}
