@@ -188,6 +188,47 @@
             "lineageTag": "211e67a1-e65f-48be-a146-5a07c8d1f58e",
             "sourceColumn": "Anomes",
             "summarizeBy": "sum"
+          },
+          {
+            "name": "Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f39b412a-6fea-4d4d-91ce-031e459fa139",
+            "sourceColumn": "Mês",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Ano",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "4d65cb2b-e6b2-429e-a3da-54ee844e43ab",
+            "sourceColumn": "Ano",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nome do Mês",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1929560f-9e37-4b9a-a906-9699e904b90c",
+            "sourceColumn": "Nome do Mês",
+            "summarizeBy": "none"
           }
         ],
         "lineageTag": "b260424a-9189-4a9b-968e-297dbeb04b36",
@@ -203,9 +244,13 @@
                 "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Cabeçalhos Promovidos\",\".\",\",\",Replacer.ReplaceText,{\"Price\"}),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Valor Substituído\",{{\"Order_ID\", type text}, {\"Order_Date\", type date}, {\"Customer_ID\", type text}, {\"Product_ID\", type text}, {\"Quantity\", Int64.Type}, {\"Price\", Currency.Type}, {\"State\", type text}}),",
                 "    #\"Coluna Personalizada Adicionada\" = Table.AddColumn(#\"Tipo Alterado\", \"Anomes\", each Number.FromText(Text.Combine({Date.ToText([Order_Date], \"yyyy\"), Date.ToText([Order_Date], \"MM\")}))),",
-                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Coluna Personalizada Adicionada\",{{\"Anomes\", Int64.Type}})",
+                "    #\"Tipo Alterado1\" = Table.TransformColumnTypes(#\"Coluna Personalizada Adicionada\",{{\"Anomes\", Int64.Type}}),",
+                "    #\"Ano Inserido\" = Table.AddColumn(#\"Tipo Alterado1\", \"Ano\", each Date.Year([Order_Date]), Int64.Type),",
+                "    #\"Mês Inserido\" = Table.AddColumn(#\"Ano Inserido\", \"Mês\", each Date.Month([Order_Date]), Int64.Type),",
+                "    #\"Nome do Mês Inserido\" = Table.AddColumn(#\"Mês Inserido\", \"Nome do Mês\", each Date.MonthName([Order_Date]), type text),",
+                "    #\"Colocar Cada Palavra Em Maiúscula\" = Table.TransformColumns(#\"Nome do Mês Inserido\",{{\"Nome do Mês\", Text.Proper, type text}})",
                 "in",
-                "    #\"Tipo Alterado1\""
+                "    #\"Colocar Cada Palavra Em Maiúscula\""
               ],
               "type": "m"
             }
@@ -709,16 +754,17 @@
                 "value": "{\"currencyCulture\":\"pt-BR\"}"
               }
             ],
+            "displayFolder": "01.Medidas de Relatório",
             "expression": [
               "",
-              "VAR anomesatual = (YEAR(TODAY())*100+MONTH(today()))",
+              "VAR anomesref = [_maxanomes]",
               "RETURN",
               "SWITCH(",
               "    TRUE(),",
-              "    [_filtro_anomes],",
+              "    [_anomesfiltrado],",
               "    CALCULATE(",
               "        [R$ Vendas Total]",
-              "        ,ecommerce_sales_brazil[Anomes]=anomesatual)",
+              "        ,ecommerce_sales_brazil[Anomes]=anomesref)",
               "    ,[R$ Vendas Total])"
             ],
             "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
@@ -726,13 +772,14 @@
           },
           {
             "name": "# Qtde Vendas",
+            "displayFolder": "01.Medidas de Relatório",
             "expression": [
               "",
               "VAR anomesatual = (YEAR(TODAY())*100+MONTH(today()))",
               "RETURN",
               "SWITCH(",
               "    TRUE(),",
-              "    [_filtro_anomes],",
+              "    [_anomesfiltrado],",
               "    CALCULATE(",
               "        [# Qtde Pedidos Total]",
               "        ,ecommerce_sales_brazil[Anomes]=anomesatual)",
@@ -742,10 +789,11 @@
             "lineageTag": "6a2f528d-1945-4724-8cc3-96a3323e1cdc"
           },
           {
-            "name": "_filtro_anomes",
+            "name": "_anomesfiltrado",
+            "displayFolder": "00.Apoio",
             "expression": [
               "",
-              "VAR anomesref = YEAR(today())*100+MONTH(today()) ",
+              "VAR anomesref = [_maxanomes]",
               "RETURN",
               "CALCULATE(",
               "    MAX(ecommerce_sales_brazil[Anomes]),",
@@ -754,6 +802,42 @@
             ],
             "formatString": "\"TRUE\";\"TRUE\";\"FALSE\"",
             "lineageTag": "4265951f-a4f9-4fd7-8655-170ea8dde405"
+          },
+          {
+            "name": "_texto_anomes",
+            "displayFolder": "00.Apoio",
+            "expression": [
+              "",
+              "SWITCH(",
+              "    TRUE(),",
+              "    HASONEVALUE(ecommerce_sales_brazil[Mês])||[_anomesfiltrado],",
+              "    FORMAT(MAX(ecommerce_sales_brazil[Order_Date]),\"MMM - YYYY\")",
+              "    ,\"Visão Anual \"&SELECTEDVALUE(ecommerce_sales_brazil[Ano]))"
+            ],
+            "lineageTag": "dfc4249b-90b2-4b72-8b16-9ed4ed8dcc92"
+          },
+          {
+            "name": "_maxanomes",
+            "displayFolder": "00.Apoio",
+            "expression": [
+              "",
+              "YEAR([_maxdata])*100+MONTH([_maxdata])"
+            ],
+            "formatString": "0",
+            "lineageTag": "9184d1c4-308d-43d5-b259-771d3424ad4f"
+          },
+          {
+            "name": "_maxdata",
+            "displayFolder": "00.Apoio",
+            "expression": [
+              "",
+              "CALCULATE(",
+              "    MAX(ecommerce_sales_brazil[Order_Date]),",
+              "    ALL(ecommerce_sales_brazil)",
+              ")"
+            ],
+            "formatString": "General Date",
+            "lineageTag": "8e74ec31-31f8-43ff-8f90-645bed6569ad"
           }
         ],
         "partitions": [
