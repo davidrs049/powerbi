@@ -16,4 +16,5 @@ Se você não tem hábito de usar github, te recomendo assistir esse vídeo: htt
 
 Sumário de projetos:
 
-Medidas dinâmicas com base no períod: https://github.com/davidrs049/powerbi/tree/feature/periodosdinamicos/periodosdinamicos
+[\[Boas práticas\] Trazer último perído padrão](https://github.com/davidrs049/powerbi/tree/b0dd651bec1e9821afec89a0a99a36f7fe690d2b/dash_periodosdinamicos) - Download do [PBIX](https://github.com/davidrs049/powerbi/raw/b0dd651bec1e9821afec89a0a99a36f7fe690d2b/dash_periodosdinamicos/dash_periodos_dinamicos.pbix)
+
