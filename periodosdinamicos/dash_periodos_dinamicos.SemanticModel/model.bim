@@ -135,21 +135,21 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "f48b5b30-99f7-4516-8867-2c7b558cd75d",
             "sourceColumn": "Quantity",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "Price",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               },
               {
                 "name": "PBI_FormatHint",
@@ -160,7 +160,7 @@
             "formatString": "\"R$\"\\ #,0.###############;-\"R$\"\\ #,0.###############;\"R$\"\\ #,0.###############",
             "lineageTag": "2a9d2bee-703e-44d4-9605-3e7fccb71076",
             "sourceColumn": "Price",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "State",
@@ -180,42 +180,42 @@
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "211e67a1-e65f-48be-a146-5a07c8d1f58e",
             "sourceColumn": "Anomes",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "Mês",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "f39b412a-6fea-4d4d-91ce-031e459fa139",
             "sourceColumn": "Mês",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "Ano",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
-                "value": "Automatic"
+                "value": "User"
               }
             ],
             "dataType": "int64",
             "formatString": "0",
             "lineageTag": "4d65cb2b-e6b2-429e-a3da-54ee844e43ab",
             "sourceColumn": "Ano",
-            "summarizeBy": "sum"
+            "summarizeBy": "none"
           },
           {
             "name": "Nome do Mês",
@@ -775,14 +775,14 @@
             "displayFolder": "01.Medidas de Relatório",
             "expression": [
               "",
-              "VAR anomesatual = (YEAR(TODAY())*100+MONTH(today()))",
+              "VAR anomesref = [_maxanomes]",
               "RETURN",
               "SWITCH(",
               "    TRUE(),",
               "    [_anomesfiltrado],",
               "    CALCULATE(",
               "        [# Qtde Pedidos Total]",
-              "        ,ecommerce_sales_brazil[Anomes]=anomesatual)",
+              "        ,ecommerce_sales_brazil[Anomes]=anomesref)",
               "    ,[# Qtde Pedidos Total])"
             ],
             "formatString": "0",

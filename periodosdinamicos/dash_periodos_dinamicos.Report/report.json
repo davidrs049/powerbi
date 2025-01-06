@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.60\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.60\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"slowDataSourceSettings\":{\"isCrossHighlightingDisabled\":false,\"isSlicerSelectionsButtonEnabled\":false,\"isFilterSelectionsButtonEnabled\":false,\"isFieldWellButtonEnabled\":false,\"isApplyAllButtonEnabled\":false},\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -21,6 +21,11 @@
         "disabled": false,
         "items": [
           {
+            "name": "LOGO_NINJABI969107726639272.png",
+            "path": "LOGO_NINJABI969107726639272.png",
+            "type": 100
+          },
+          {
             "name": "fundo_relat_rio8478952226865268.png",
             "path": "fundo_relat_rio8478952226865268.png",
             "type": 100
@@ -41,6 +46,15 @@
       "name": "a0dca28239f873bd6263",
       "visualContainers": [
         {
+          "config": "{\"name\":\"1cfa68ff43e0cd42b739\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1029.1635360361531,\"y\":23.686157331096734,\"z\":6000,\"width\":251.07326770962536,\"height\":62.76831692740634,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"LOGO_NINJABI969107726639272.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 62.77,
+          "width": 251.07,
+          "x": 1029.16,
+          "y": 23.69,
+          "z": 6000.00
+        },
+        {
           "config": "{\"name\":\"27c8e908cdf8869f8fef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":585.3281939492273,\"y\":240.9266444751437,\"z\":2000,\"width\":670.2702801423869,\"height\":443.24324977157846,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"columnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"ecommerce_sales_brazil.Order_Date.Variation.Hierarquia de datas.Dia\",\"active\":true}],\"Y\":[{\"queryRef\":\"Medidas.# Qtde Vendas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"ecommerce_sales_brazil.Order_Date.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"Order_Date Dia\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"# Qtde Vendas\"},\"Name\":\"Medidas.# Qtde Vendas\",\"NativeReferenceName\":\"# Qtde Vendas\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Name\":\"Variation\",\"Property\":\"Order_Date\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
           "filters": "[]",
           "height": 443.24,
@@ -50,13 +64,13 @@
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"315e413bf39f365f9017\",\"layouts\":[{\"id\":0,\"position\":{\"x\":534.189412641319,\"y\":23.113964970057076,\"z\":3002,\"width\":224.71910387555488,\"height\":74.47833157018391,\"tabOrder\":3002}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Mês / Ano:\",\"textStyle\":{\"fontWeight\":\"bold\"}}]},{\"textRuns\":[{\"value\":{\"propertyIdentifier\":{\"objectName\":\"values\",\"propertyName\":\"expr\"},\"selector\":{\"id\":\"Valor\"}},\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"DIN\",\"fontSize\":\"20pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"_texto_anomes\"},\"Name\":\"Medidas._texto_maxanomes\"}]}}},\"Property\":\"Medidas._texto_maxanomes\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Valor\",\"utterance\":\"_texto_maxanomes\"}}}}}},\"selector\":{\"id\":\"Valor\"}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"right\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}",
+          "config": "{\"name\":\"315e413bf39f365f9017\",\"layouts\":[{\"id\":0,\"position\":{\"x\":534.189412641319,\"y\":23.113964970057076,\"z\":5000,\"width\":224.71910387555488,\"height\":74.47833157018391,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Mês / Ano:\",\"textStyle\":{\"fontWeight\":\"bold\"}}]},{\"textRuns\":[{\"value\":{\"propertyIdentifier\":{\"objectName\":\"values\",\"propertyName\":\"expr\"},\"selector\":{\"id\":\"Valor\"}},\"textStyle\":{\"fontWeight\":\"bold\",\"fontFamily\":\"DIN\",\"fontSize\":\"20pt\"}}],\"horizontalTextAlignment\":\"right\"}]}}],\"values\":[{\"properties\":{\"expr\":{\"expr\":{\"Min\":{\"Expression\":{\"Column\":{\"Expression\":{\"Subquery\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"_texto_anomes\"},\"Name\":\"Medidas._texto_maxanomes\"}]}}},\"Property\":\"Medidas._texto_maxanomes\"}},\"IncludeAllTypes\":1},\"Annotations\":{\"NaturalLanguage\":{\"version\":1,\"kind\":\"NaturalLanguage\",\"annotation\":{\"name\":\"Valor\",\"utterance\":\"_texto_maxanomes\"}}}}}},\"selector\":{\"id\":\"Valor\"}}]},\"vcObjects\":{\"padding\":[{\"properties\":{\"right\":{\"expr\":{\"Literal\":{\"Value\":\"15D\"}}}}}]}}}",
           "filters": "[]",
           "height": 74.48,
           "width": 224.72,
           "x": 534.19,
           "y": 23.11,
-          "z": 3002.00
+          "z": 5000.00
         },
         {
           "config": "{\"name\":\"427153b25f2b6d4a7f68\",\"layouts\":[{\"id\":0,\"position\":{\"x\":112.46155696933157,\"y\":111.52437732792046,\"z\":0,\"width\":1143.3591625215377,\"height\":117.14745517638704,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Medidas.R$ Vendas\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"R$ Vendas\"},\"Name\":\"Medidas.R$ Vendas\",\"NativeReferenceName\":\"R$ Vendas\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"R$ Vendas\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"labels\":[{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
@@ -77,22 +91,22 @@
           "z": 3000.00
         },
         {
-          "config": "{\"name\":\"b0c2b100b477e4ce40e1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":113.00160652027903,\"y\":240.12841385559292,\"z\":1000,\"width\":571.428578426411,\"height\":443.0176619260939,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Customer_ID\"},{\"queryRef\":\"ecommerce_sales_brazil.Order_ID\"},{\"queryRef\":\"ecommerce_sales_brazil.Product_ID\"},{\"queryRef\":\"Medidas.R$ Vendas\"},{\"queryRef\":\"ecommerce_sales_brazil.Order_Date\"},{\"queryRef\":\"Medidas._texto_maxanomes\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Customer_ID\"},\"Name\":\"ecommerce_sales_brazil.Customer_ID\",\"NativeReferenceName\":\"Customer_ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Order_ID\"},\"Name\":\"ecommerce_sales_brazil.Order_ID\",\"NativeReferenceName\":\"Order_ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Product_ID\"},\"Name\":\"ecommerce_sales_brazil.Product_ID\",\"NativeReferenceName\":\"Product_ID\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"R$ Vendas\"},\"Name\":\"Medidas.R$ Vendas\",\"NativeReferenceName\":\"R$ Vendas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Order_Date\"},\"Name\":\"ecommerce_sales_brazil.Order_Date\",\"NativeReferenceName\":\"Order_Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"_texto_anomes\"},\"Name\":\"Medidas._texto_maxanomes\",\"NativeReferenceName\":\"_texto_anomes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Order_Date\"}}}]},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"b0c2b100b477e4ce40e1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":113.00160652027903,\"y\":240.12841385559292,\"z\":1000,\"width\":463.56340856614463,\"height\":443.0176619260939,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Customer_ID\"},{\"queryRef\":\"ecommerce_sales_brazil.Order_ID\"},{\"queryRef\":\"ecommerce_sales_brazil.Product_ID\"},{\"queryRef\":\"Medidas.R$ Vendas\"},{\"queryRef\":\"ecommerce_sales_brazil.Order_Date\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0},{\"Name\":\"m\",\"Entity\":\"Medidas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Customer_ID\"},\"Name\":\"ecommerce_sales_brazil.Customer_ID\",\"NativeReferenceName\":\"Customer_ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Order_ID\"},\"Name\":\"ecommerce_sales_brazil.Order_ID\",\"NativeReferenceName\":\"Order_ID\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Product_ID\"},\"Name\":\"ecommerce_sales_brazil.Product_ID\",\"NativeReferenceName\":\"Product_ID\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"m\"}},\"Property\":\"R$ Vendas\"},\"Name\":\"Medidas.R$ Vendas\",\"NativeReferenceName\":\"R$ Vendas\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Order_Date\"},\"Name\":\"ecommerce_sales_brazil.Order_Date\",\"NativeReferenceName\":\"Order_Date\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Order_Date\"}}}]},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
           "height": 443.02,
-          "width": 571.43,
+          "width": 463.56,
           "x": 113.00,
           "y": 240.13,
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"fe54e7222455bc7a47ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":332.4528823445581,\"y\":22.53917846403784,\"z\":3001,\"width\":194.9638937139273,\"height\":75.50624785452676,\"tabOrder\":3001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Anomes\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"},\"Name\":\"ecommerce_sales_brazil.Anomes\",\"NativeReferenceName\":\"Anomes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "config": "{\"name\":\"fe54e7222455bc7a47ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":332.4528823445581,\"y\":22.53917846403784,\"z\":4000,\"width\":194.9638937139273,\"height\":75.50624785452676,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Anomes\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"},\"Name\":\"ecommerce_sales_brazil.Anomes\",\"NativeReferenceName\":\"Anomes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
           "filters": "[]",
           "height": 75.51,
           "width": 194.96,
           "x": 332.45,
           "y": 22.54,
-          "z": 3001.00
+          "z": 4000.00
         }
       ],
       "width": 1280.00
