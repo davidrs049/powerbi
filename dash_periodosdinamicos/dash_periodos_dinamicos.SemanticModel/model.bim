@@ -239,7 +239,7 @@
             "source": {
               "expression": [
                 "let",
-                "    Fonte = Csv.Document(File.Contents(\"C:\\Users\\David note\\Desktop\\github\\projetos powerbi\\powerbi\\ecommerce_sales_brazil.csv\"),[Delimiter=\",\", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
+                "    Fonte = Csv.Document(File.Contents(\"c:\\Users\\David note\\Desktop\\github\\projetos powerbi\\powerbi\\dash_periodosdinamicos\\base\\ecommerce_sales_brazil.csv\"),[Delimiter=\",\", Columns=7, Encoding=1252, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),",
                 "    #\"Valor Substituído\" = Table.ReplaceValue(#\"Cabeçalhos Promovidos\",\".\",\",\",Replacer.ReplaceText,{\"Price\"}),",
                 "    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Valor Substituído\",{{\"Order_ID\", type text}, {\"Order_Date\", type date}, {\"Customer_ID\", type text}, {\"Product_ID\", type text}, {\"Quantity\", Int64.Type}, {\"Price\", Currency.Type}, {\"State\", type text}}),",

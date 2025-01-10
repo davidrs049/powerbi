@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+import os  # Importar módulo para manipulação de diretórios
 
 # Configurar a semente para resultados consistentes
 np.random.seed(42)
@@ -44,7 +45,8 @@ sales_df = pd.DataFrame(data)
 # Exibir um exemplo e salvar como CSV
 print(sales_df.head())
 
-# Salvar para uso posterior
-file_path = "ecommerce_sales_brazil.csv"
+# Salvar para uso posterior na mesma pasta do script
+current_dir = os.path.dirname(os.path.abspath(__file__))  # Diretório do script atual
+file_path = os.path.join(current_dir, "ecommerce_sales_brazil.csv")
 sales_df.to_csv(file_path, index=False)
 print(f"Base de dados salva em: {file_path}")

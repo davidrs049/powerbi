@@ -46,12 +46,12 @@
       "name": "a0dca28239f873bd6263",
       "visualContainers": [
         {
-          "config": "{\"name\":\"1cfa68ff43e0cd42b739\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1029.1635360361531,\"y\":23.686157331096734,\"z\":6000,\"width\":251.07326770962536,\"height\":62.76831692740634,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"LOGO_NINJABI969107726639272.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "config": "{\"name\":\"1cfa68ff43e0cd42b739\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1077.7201585649013,\"y\":22.501849464541895,\"z\":6000,\"width\":177.6461799832255,\"height\":62.76831692740634,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"imageUrl\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"LOGO_NINJABI969107726639272.png\"}}}}}]}},\"howCreated\":\"InsertVisualButton\"}",
           "filters": "[]",
           "height": 62.77,
-          "width": 251.07,
-          "x": 1029.16,
-          "y": 23.69,
+          "width": 177.65,
+          "x": 1077.72,
+          "y": 22.50,
           "z": 6000.00
         },
         {
@@ -82,7 +82,7 @@
           "z": 0.00
         },
         {
-          "config": "{\"name\":\"46c3fc99e48ecbece9e6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":127.60736366970538,\"y\":22.436459546321824,\"z\":3000,\"width\":194.91674230867088,\"height\":75.72305096883616,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Ano\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Ano\"},\"Name\":\"ecommerce_sales_brazil.Ano\",\"NativeReferenceName\":\"Ano\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "config": "{\"name\":\"46c3fc99e48ecbece9e6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":127.60736366970538,\"y\":22.436459546321824,\"z\":3000,\"width\":194.91674230867088,\"height\":75.72305096883616,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Ano\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Ano\"},\"Name\":\"ecommerce_sales_brazil.Ano\",\"NativeReferenceName\":\"Ano\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}}}}]}}}",
           "filters": "[]",
           "height": 75.72,
           "width": 194.92,
@@ -100,7 +100,7 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"fe54e7222455bc7a47ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":332.4528823445581,\"y\":22.53917846403784,\"z\":4000,\"width\":194.9638937139273,\"height\":75.50624785452676,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Anomes\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"},\"Name\":\"ecommerce_sales_brazil.Anomes\",\"NativeReferenceName\":\"Anomes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
+          "config": "{\"name\":\"fe54e7222455bc7a47ef\",\"layouts\":[{\"id\":0,\"position\":{\"x\":332.4528823445581,\"y\":22.53917846403784,\"z\":4000,\"width\":194.9638937139273,\"height\":75.50624785452676,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"ecommerce_sales_brazil.Anomes\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"e\",\"Entity\":\"ecommerce_sales_brazil\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"},\"Name\":\"ecommerce_sales_brazil.Anomes\",\"NativeReferenceName\":\"Anomes\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"e\"}},\"Property\":\"Anomes\"}}}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"general\":[{\"properties\":{}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"radius\":{\"expr\":{\"Literal\":{\"Value\":\"10D\"}}},\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
           "filters": "[]",
           "height": 75.51,
           "width": 194.96,
