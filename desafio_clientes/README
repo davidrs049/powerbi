@@ -1,0 +1,16 @@
+# Desafio Contagem acumulada
+
+
+## Business Case: Análise de Recorrência de Categorias em Transações
+
+### Cenário
+
+Uma empresa de e-commerce deseja analisar o comportamento de compra dos clientes em relação a diferentes categorias de produtos. O objetivo é entender a recorrência de compras de cada categoria ao longo do tempo, permitindo a implementação de estratégias como recomendações personalizadas, promoções segmentadas e otimização de estoque.
+
+### Problema
+
+Atualmente, a empresa possui registros de compras organizados por data e categoria, mas não tem visibilidade sobre a frequência acumulada de compras por categoria ao longo do tempo para cada cliente. Isso impede a identificação de padrões de fidelidade a determinadas categorias e dificulta ações estratégicas baseadas em recorrência.
+
+### Objetivo
+
+Criar uma métrica de contagem acumulada das compras de cada cliente por categoria, permitindo análises de recorrência e segmentação de clientes com base na frequência de compra de diferentes produtos.
